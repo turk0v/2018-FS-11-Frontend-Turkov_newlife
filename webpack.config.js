@@ -1,31 +1,51 @@
 const path = require('path');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const sourceRoot = path.resolve(__dirname, 'src');
 
 module.exports = {
-	entry: './src/index.js',
+	entry: {
+		create: sourceRoot + '/app/create/index.js'
+	},
 	output: {
-		path: __dirname + '/dist',
-		publicPath: '/',
-		filename: 'bundle.js'
+		path: path.resolve(__dirname, 'dist'),
+		//publicPath: '/static/',
+		filename: '[name]/bundle.js'
 	},
+	devServer: {
+	     contentBase: './dist'
+	},
+	devtool: 'inline-source-map',
 	module: {
-		rules: [{
-			test: /\.(js|jsx)$/,
-			exclude: /node_modules/,
-			use: ['babel-loader']
-		}]
-	},
-	resolve: {
-		extensions: ['*', '.js', '.jsx']
+		rules: [
+			{
+				test: /\.js$/,
+				include: sourceRoot,
+				use: {
+					loader: 'babel-loader'
+				}
+			},
+			{
+				test: /shadow\.css$/,
+				include: sourceRoot,
+				use: {
+					loader: 'css-loader'
+				}
+			},
+			{
+				test: /index\.css$/,
+				include: sourceRoot,
+				use: ExtractTextPlugin.extract('css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]')
+			}
+		]
 	},
 	plugins: [
+		new ExtractTextPlugin({
+			filename: '[name]/style.css'
+		}),
 		new HtmlWebpackPlugin({
-			filename: 'index.html',
-			template: './src/index.html'
+			filename: 'create/index.html',
+			template: './src/app/create/index.html'
 		})
-	],
-	devServer: {
-		contentBase: './dist'
-	}
+	]
 };
