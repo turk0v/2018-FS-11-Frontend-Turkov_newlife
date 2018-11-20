@@ -5,8 +5,9 @@ const template = `
 	<style>${shadowStyles.toString()}</style>
 	<div class="header-user">
 		<img src="../public/icons/back_arrow.png" id="back_img">
+		<img src="../public/icons/avatar.png" id="user_avatar">
 	    <div class="senderInfo">
-	        <div class="name" >Jeniffer</div>
+	        <div class="name">Jeniffer</div>
 	        <div class="last_seen">was online just now</div>
 	    </div>
     	<img src="../public/icons/menu.png" alt="Menu" id="menu_button">

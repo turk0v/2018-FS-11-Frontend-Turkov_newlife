@@ -5,6 +5,7 @@ import Header from '../../lib/components/head'
 import menuButton from '../../images/menu.png'
 import searchButton from '../../images/search.png'
 import arrow from '../../images/back_arrow.png'
+import avatar from '../../images/avatar.png'
 
 const header = new Header;
 const messageForm = new MessageForm;

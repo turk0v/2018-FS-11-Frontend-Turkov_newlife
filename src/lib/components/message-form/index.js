@@ -12,7 +12,6 @@ const template = `
 			</div>
 			<div slot="after">
 				<file-input></file-input>
-				<drag-n-drop></drag-n-drop>
 				<button type="submit">Send</button>
 			</div>
 		</form-input>

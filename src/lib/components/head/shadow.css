@@ -2,12 +2,13 @@
 	display: flex;
 	background-color: #8e24aa;
 	font-family: 'Roboto', sans-serif;
+	height: 60px
 }
 
 
 .header-user > .senderInfo {
-	margin-left: 2ch;
 	margin-top: auto;
+	margin-bottom: auto;
 	display: flex;
 	flex-direction: column;
 	color: white;
@@ -25,23 +26,35 @@
 }
 
 #back_img {
+	margin-top: auto;
+	margin-bottom: auto;
 	text-decoration: none;
+	display: flex;
+	flex-direction: column;
+	margin-left: 20px;
 }
 
-#avatar {
-	margin-left: 30px;
-	border-radius: 50%;
+#user_avatar {
+	margin-top: auto;
+	margin-bottom: auto;
+	border-radius: 60%;
+	display: flex;
+	flex-direction: column;
+	margin-left:auto;
+	margin-right: 15px;
 }
 
 #menu_button {
+	margin-top: auto;
+	margin-bottom: auto;
 	justify-content: flex-end;
 	height: 25px;
-	margin-top: 7px;
 	margin-left: auto;
 }
 
 #search_button {
-	margin-top: 7px;
+	margin-top: auto;
+	margin-bottom: auto;
 	justify-content: flex-end;
 	margin-right: 5px;
 	height: 25px;

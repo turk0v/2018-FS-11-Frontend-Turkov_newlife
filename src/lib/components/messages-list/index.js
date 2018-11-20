@@ -14,7 +14,7 @@ class MessagesList extends HTMLElement {
 		shadowRoot.innerHTML = template;
 		this._getElements();
 		this._messages = {};
-		this.addMessage({text: 'Привет, как дела?', time: new Date, my: false});
+		this.addMessage({text: 'Привет, это снова я. Давно тебя не было слышно', time: new Date, my: false});
 	}
 
 	addMessage (message) {
