@@ -3,6 +3,8 @@ import MessageForm from '../../lib/components/message-form';
 import MessagesList from '../../lib/components/messages-list';
 import Header from '../../lib/components/head'
 import menuButton from '../../images/menu.png'
+import searchButton from '../../images/search.png'
+import arrow from '../../images/back_arrow.png'
 
 const header = new Header;
 const messageForm = new MessageForm;
@@ -16,5 +18,3 @@ messageForm.addEventListener('new-message', function (event) {
 	messagesList.addMessage(event.detail);
 });
 
-var menuImg = document.getElementById('menu');
-menuImg.src = menuButton;
