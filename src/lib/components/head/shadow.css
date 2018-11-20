@@ -1,0 +1,48 @@
+.header-user {
+	display: flex;
+	background-color: #8e24aa;
+	font-family: 'Roboto', sans-serif;
+}
+
+
+.header-user > .senderInfo {
+	margin-left: 2ch;
+	margin-top: auto;
+	display: flex;
+	flex-direction: column;
+	color: white;
+}
+
+
+.last_seen {
+	color: #c9c9c9;
+}
+
+.header-user img {
+	top: 500%;
+	margin: 5px 0 0 0;
+	height: 30px;
+}
+
+#back_img {
+	text-decoration: none;
+}
+
+#avatar {
+	margin-left: 30px;
+	border-radius: 50%;
+}
+
+#menu_button {
+	justify-content: flex-end;
+	height: 25px;
+	margin-top: 7px;
+	margin-left: auto;
+}
+
+#search_button {
+	margin-top: 7px;
+	justify-content: flex-end;
+	margin-right: 5px;
+	height: 25px;
+}

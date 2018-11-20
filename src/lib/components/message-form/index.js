@@ -2,6 +2,7 @@ import shadowStyles from './shadow.css';
 import FormInput from '../form/-input';
 import GeoInput from '../form/-geo-input';
 import FileInput from '../form/-file-input';
+import DragNDrop from '../form/drag-n-drop/';
 
 const template = `
 	<style>${shadowStyles.toString()}</style>
@@ -11,7 +12,8 @@ const template = `
 			</div>
 			<div slot="after">
 				<file-input></file-input>
-				<button type="submit">></button>
+				<drag-n-drop></drag-n-drop>
+				<button type="submit">Send</button>
 			</div>
 		</form-input>
 		<geo-input name="message-pos"></geo-input>
@@ -30,17 +32,6 @@ class MessageForm extends HTMLElement {
 		this._initElements();
 		this._addHandlers();
 	}
-
-	// static get observedAttributes() {
-	// 	return [
-	// 		"action",
-	// 		"method"
-	// 	]
-	// }
-
-	// attributeChangedCallback(attrName, oldVal, newVal) {
-	// 	this._elements.form[attrName] = newVal;
-	// }
 
 	_initElements () {
 		var form = this.shadowRoot.querySelector('form');
